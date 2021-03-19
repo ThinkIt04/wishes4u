@@ -805,8 +805,29 @@
                     <a href="https://twitter.com/login?lang=en-gb" target="_blank"><i class="fab fa-twitter-square"></i></a>
                </li>
           </ul>
+          <button id="iu"><i class="fas fa-chevron-up" onclick="la()"></i></button>
+          <div id="acl">
+               <img id="im" src="https://lh3.googleusercontent.com/-i72hqOWzluE/YFSF65uW40I/AAAAAAAAAg0/vRHZgfr4ET8vUFTmyedrEhbf86V_zOIVwCLcBGAsYHQ/holi-wishes4u.png"/>
+               <p id="ip">Touch to download image...</p>
+          </div>
      </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0-rc.2/FileSaver.min.js" integrity="sha512-OC1HN+gJyPV7OoxfkbL2N4mP5JXWthtQgAf6zjQvE+jhHGWZNpSwzBVC30DxiX/iQts79gwx3LMizNdwOo6Okg==" crossorigin="anonymous"></script>
      <script type="text/javascript">
+
+          let btnDownload = document.getElementById('acl');
+          let img = document.getElementById('im');
+          
+          // Must use FileSaver.js 2.0.2 because 2.0.3 has issues.
+          btnDownload.addEventListener('click', () => {
+          let imagePath = img.getAttribute('src');
+          let fileName = getFileName(imagePath);
+          saveAs(imagePath, fileName);
+          });
+          
+          function getFileName(str) {
+          return str.substring(str.lastIndexOf('/') + 1)
+          }
+
           // Set the date we're counting down to
           var countDownDate = new Date("Mar 29, 2021 00:00:00").getTime();
 
