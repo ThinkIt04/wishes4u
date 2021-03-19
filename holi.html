@@ -737,18 +737,18 @@
      <div id="main">
           <span id="h1">
                <ul class="c-rainbow">
-                    <li class="c-rainbow__layer c-rainbow__layer--white"><span id="ll1">Ashish Chandra</span></li>
-                    <li class="c-rainbow__layer c-rainbow__layer--orange"><span id="ll2">Ashish Chandra</span></li>
-                    <li class="c-rainbow__layer c-rainbow__layer--red"><span id="ll3">Ashish Chandra</span></li>
-                    <li class="c-rainbow__layer c-rainbow__layer--violet"><span id="ll4">Ashish Chandra</span></li>
-                    <li class="c-rainbow__layer c-rainbow__layer--blue"><span id="ll5">Ashish Chandra</span></li>
-                    <li class="c-rainbow__layer c-rainbow__layer--green"><span id="ll6">Ashish Chandra</span></li>
-                    <li class="c-rainbow__layer c-rainbow__layer--yellow"><span id="ll7">Ashish Chandra</span></li>
+                    <li class="c-rainbow__layer c-rainbow__layer--white"><span id="ll1"></span></li>
+                    <li class="c-rainbow__layer c-rainbow__layer--orange"><span id="ll2"></span></li>
+                    <li class="c-rainbow__layer c-rainbow__layer--red"><span id="ll3"></span></li>
+                    <li class="c-rainbow__layer c-rainbow__layer--violet"><span id="ll4"></span></li>
+                    <li class="c-rainbow__layer c-rainbow__layer--blue"><span id="ll5"></span></li>
+                    <li class="c-rainbow__layer c-rainbow__layer--green"><span id="ll6"></span></li>
+                    <li class="c-rainbow__layer c-rainbow__layer--yellow"><span id="ll7"></span></li>
                </ul>
           </span>
           <span id="h2">
                <h2>
-                    <span id="ki">की ओर से</span>
+                    <span id="ki">मेरी ओर से</span>
                     <br/>
                     <span>आपको सहपरिवार</span>
                </h2>
@@ -805,25 +805,8 @@
                     <a href="https://twitter.com/login?lang=en-gb" target="_blank"><i class="fab fa-twitter-square"></i></a>
                </li>
           </ul>
-          <button id="iu"><i class="fas fa-chevron-up" onclick="la()"></i></button>
-          <a href="https://lh3.googleusercontent.com/-6SI8FqSQ4hM/YFRhvlsXTSI/AAAAAAAAAgs/7b0pvp8AGLc4ACBB-7MKSByRr81WNT0EwCLcBGAsYHQ/holi-6.png" download>
-               <img id="im" src="https://lh3.googleusercontent.com/-6SI8FqSQ4hM/YFRhvlsXTSI/AAAAAAAAAgs/7b0pvp8AGLc4ACBB-7MKSByRr81WNT0EwCLcBGAsYHQ/holi-6.png"/>
-               <p id="ip">Touch to download image...</p>
-          </a>
      </div>
      <script type="text/javascript">
-
-          function la(){
-               document.getElementById("iu").style.display="none";
-               document.getElementById("share").style.borderRadius="0";
-               document.getElementById("share").style.paddingTop="4rem";
-               document.getElementById("share").style.overflowY="scroll";
-               document.getElementById("share").style.height="100%";
-               document.getElementById("share").style.width="100%";
-               document.getElementById("im").style.display="block";
-               document.getElementById("ip").style.display="block";
-          }
-
           // Set the date we're counting down to
           var countDownDate = new Date("Mar 29, 2021 00:00:00").getTime();
 
@@ -865,6 +848,7 @@
                     document.getElementById("ll5").innerHTML = "Enter Your Name";
                     document.getElementById("ll6").innerHTML = "Enter Your Name";
                     document.getElementById("ll7").innerHTML = "Enter Your Name";
+                    document.getElementById("ki").innerText = "की ओर से";
                } else {
                     document.getElementById("ll1").innerHTML = inpObj.value;
                     document.getElementById("ll2").innerHTML = inpObj.value;
@@ -874,7 +858,8 @@
                     document.getElementById("ll6").innerHTML = inpObj.value;
                     document.getElementById("ll7").innerHTML = inpObj.value;
                     document.getElementById("nam").innerHTML = inpObj.value;
-                    document.getElementById("share").style.height = "23rem";
+                    document.getElementById("ki").innerText = "की ओर से";
+                    document.getElementById("share").style.height = "20rem";
                     document.getElementById("l1").innerHTML = `<a href="whatsapp://send?text=*Happy Holi* ____________________ *${name}* की ओर से आपको सहपरिवार *होलिका दहन* और *होली* की खूब सारी बधाई || ____________________ ऐसे मनाना होली का त्योहार, पिचकारी से बरसे सिर्फ प्यार, ये है मौका अपनों से गले मिलाने का, तो गुलाल और रंग लेकर हो जाओ तैयार... ____________________ नीली लिंक को छुइए और देखिये *${name}* ने आपको क्या भेजा है || *https://thinkit04.github.io/wishes4u/holi.html* ____________________ वो गुलाल की ठंडक, वो शाम की रोनक, वो लोगों का गाना, वो गलियों का चमकना, वो दिन में मस्ती, वो रंगों की धूम, होली आ गई है… होली है… ____________________ *Happy Holi*                                           *${name}*                           with *wishes4u*" data-action="share/whatsapp/share"  ><i class="fab fa-whatsapp-square"></i></a>`;
                     document.getElementById("l2").innerHTML = `<a href="https://telegram.me/share/url?url=https://thinkit04.github.io/wishes4u/holi.html &text=Happy Holi ____________________ ${name} की ओर से आपको सहपरिवार होलिका दहन और होली की खूब सारी बधाई || ____________________ ऐसे मनाना होली का त्योहार, पिचकारी से बरसे सिर्फ प्यार, ये है मौका अपनों से गले मिलाने का, तो गुलाल और रंग लेकर हो जाओ तैयार... ____________________ नीली लिंक को छुइए और देखिये ${name} ने आपको क्या भेजा है || https://thinkit04.github.io/wishes4u/holi.html ____________________ वो गुलाल की ठंडक, वो शाम की रोनक, वो लोगों का गाना, वो गलियों का चमकना, वो दिन में मस्ती, वो रंगों की धूम, होली आ गई है… होली है… ____________________ Happy Holi                                           ${name}                           with wishes4u"><i class="fab fa-telegram"></i></a>`;
                     document.getElementById("l3").innerHTML = `<a href="https://www.facebook.com/sharer.php?u=Happy Holi ____________________ ${name} की ओर से आपको सहपरिवार होलिका दहन और होली की खूब सारी बधाई || ____________________ ऐसे मनाना होली का त्योहार, पिचकारी से बरसे सिर्फ प्यार, ये है मौका अपनों से गले मिलाने का, तो गुलाल और रंग लेकर हो जाओ तैयार... ____________________ नीली लिंक को छुइए और देखिये ${name} ने आपको क्या भेजा है || https://thinkit04.github.io/wishes4u/holi.html ____________________ वो गुलाल की ठंडक, वो शाम की रोनक, वो लोगों का गाना, वो गलियों का चमकना, वो दिन में मस्ती, वो रंगों की धूम, होली आ गई है… होली है… ____________________ Happy Holi                                           ${name}                           with wishes4u &amp;src=sdkpreparse" target="_blank"><i class="fab fa-facebook-square"></i></a>`;

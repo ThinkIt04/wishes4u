@@ -3,6 +3,7 @@
      margin: 0;
      box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@900&family=Roboto+Slab&family=Tillana:wght@600&display=swap');
 $root: '.c-rainbow';
 :root {
  --color-background: #31037D;
@@ -139,7 +140,7 @@ body{
           position: fixed;
           display: block;
           z-index: 999;
-          width: 22.5rem;
+          width: 12.5rem;
           background-color: #646464;
           height: 3rem;
           top: 1rem;
@@ -273,6 +274,7 @@ body{
           height: 100vh;
           width: 75vw;
           z-index: 1;
+          padding-bottom: 4rem;
           position: absolute;
           top: 0;
           left: 50%;
@@ -459,71 +461,81 @@ body{
                     }
                }
           }
-          form{
-               margin: 7rem auto 1rem;
-               z-index: 999999999999999999;
-               #f{
-                    text-align: center;
-                    margin: 0;
-                    margin-bottom: 1rem;
-                    width: 100%;
-                    font-size: 1.75rem;
-                    padding: 0;
-                    text-align: center;
-                    font-family: 'Tillana', cursive;
-                    color: white;
-                    text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1), 0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
-                    animation: bop3 2s ease-in-out infinite;
-                    @keyframes bop3 {
-                         0%{
-                              transform: scale(0.9);
-                         }
-                         50%{
-                              transform: scale(1) rotateZ(3deg);
-                         }
-                         100%{
-                              transform: scale(0.9);
-                         }
+          #f{
+               text-align: center;
+               margin: 2rem 0 0 0;
+               width: 100%;
+               font-size: 1.75rem;
+               padding: 0;
+               text-align: center;
+               font-family: 'Tillana', cursive;
+               color: white;
+               text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1), 0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+               animation: bop3 2s ease-in-out infinite;
+               @keyframes bop3 {
+                    0%{
+                         transform: scale(0.9);
+                    }
+                    50%{
+                         transform: scale(1) rotateZ(3deg);
+                    }
+                    100%{
+                         transform: scale(0.9);
                     }
                }
-               input{
-                    padding: 0 1vw 0 1vw;
-                    font-family: 'Roboto Slab', serif;
-                    font-size: 2rem;
-                    outline: none;
-               }
-               input[type=text]{
-                    width: 55vw;
-                    background-color: cyan;
-                    color: #004646;
-                    border: 0.2rem solid #004646;
-                    border-radius: 1.5rem 0 0 1.5rem;
-               }
-               label{
-                    padding: 0 1vw 0 1vw;
-                    font-family: 'Roboto Slab', serif;
-                    font-size: 2rem;
-                    width: 15vw;
-                    background-color: #004646;
-                    border: 0.2rem solid cyan;
-                    color: cyan;
-                    cursor: pointer;
-                    border-radius: 0 1.5rem 1.5rem 0;
-               }
+          }
+     }
+     #form{
+          margin: 7rem auto 0.5rem;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 2;
+          input{
+               padding: 0 1vw 0 1vw;
+               font-family: 'Roboto Slab', serif;
+               font-size: 2rem;
+               outline: none;
+               width: 55vw;
+               background-color: cyan;
+               color: #004646;
+               border: 0.2rem solid #004646;
+               border-radius: 1.5rem 0 0 1.5rem;
+          }
+          button{
+               padding: 0 1vw 0 1vw;
+               font-family: 'Roboto Slab', serif;
+               font-size: 2rem;
+               width: 15vw;
+               background-color: #004646;
+               border: 0.2rem solid cyan;
+               color: cyan;
+               cursor: pointer;
+               border-radius: 0 1.5rem 1.5rem 0;
           }
      }
      #share{
           position: fixed;
           left: 50%;
+          overflow: hidden;
+          height: 0rem;
+          transition: 0.5s ease-in-out;
           transform: translateX(-50%);
           width: 72.5vw;
           background-color: white;
           border-radius: 2rem 2rem 0 0;
           bottom: 0;
-          height: auto;
           z-index: 99;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
           display: grid;
           place-items: center;
+          &::-webkit-scrollbar {
+               display: none;
+          }
           p{
                font-size: 1.5rem;
                width: 65vw;
@@ -577,6 +589,35 @@ body{
                     }
                }
           }
-          
+          button{
+               width: 75vw;
+               border: none;
+               background: none;
+               transition: 0.5s ease-in-out;
+               font-size: 2.5rem;
+               outline: none;
+               i{
+                    cursor: pointer;
+               }
+          }
+          a{
+               text-align: center;
+               text-decoration: none;
+          }
+          a img{
+               width: 75vw;
+               transition: 0.5s ease-in-out;
+               display: none;
+          }
+          a p{
+               color: black;
+               width: 100%;
+               text-align: center;
+               text-decoration: none;
+               transition: 0.5s ease-in-out;
+               font-family: 'Tillana', cursive;
+               font-size: 1rem;
+               display: none;
+          }
      }
 }

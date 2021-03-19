@@ -1,10 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@900&family=Roboto+Slab&family=Tillana:wght@600&display=swap");
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-
 
 :root {
   --color-background: #31037D;
@@ -263,7 +263,7 @@ body #logo {
   position: fixed;
   display: block;
   z-index: 999;
-  width: 22.5rem;
+  width: 12.5rem;
   background-color: #646464;
   height: 3rem;
   top: 1rem;
@@ -475,6 +475,7 @@ body #main {
   height: 100vh;
   width: 75vw;
   z-index: 1;
+  padding-bottom: 4rem;
   position: absolute;
   top: 0;
   left: 50%;
@@ -845,15 +846,9 @@ body #main #i6 {
   }
 }
 
-body #main form {
-  margin: 7rem auto 1rem;
-  z-index: 999999999999999999;
-}
-
-body #main form #f {
+body #main #f {
   text-align: center;
-  margin: 0;
-  margin-bottom: 1rem;
+  margin: 2rem 0 0 0;
   width: 100%;
   font-size: 1.75rem;
   padding: 0;
@@ -895,14 +890,28 @@ body #main form #f {
   }
 }
 
-body #main form input {
+body #form {
+  margin: 7rem auto 0.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 2;
+}
+
+body #form input {
   padding: 0 1vw 0 1vw;
   font-family: 'Roboto Slab', serif;
   font-size: 2rem;
   outline: none;
-}
-
-body #main form input[type=text] {
   width: 55vw;
   background-color: cyan;
   color: #004646;
@@ -910,7 +919,7 @@ body #main form input[type=text] {
   border-radius: 1.5rem 0 0 1.5rem;
 }
 
-body #main form label {
+body #form button {
   padding: 0 1vw 0 1vw;
   font-family: 'Roboto Slab', serif;
   font-size: 2rem;
@@ -925,17 +934,26 @@ body #main form label {
 body #share {
   position: fixed;
   left: 50%;
+  overflow: hidden;
+  height: 0rem;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 72.5vw;
   background-color: white;
   border-radius: 2rem 2rem 0 0;
   bottom: 0;
-  height: auto;
   z-index: 99;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   display: -ms-grid;
   display: grid;
   place-items: center;
+}
+
+body #share::-webkit-scrollbar {
+  display: none;
 }
 
 body #share p {
@@ -1002,5 +1020,43 @@ body #share li:nth-child(3) a {
 body #share li:nth-child(4) a {
   color: #1DA1F2;
   text-decoration: none;
+}
+
+body #share button {
+  width: 75vw;
+  border: none;
+  background: none;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  font-size: 2.5rem;
+  outline: none;
+}
+
+body #share button i {
+  cursor: pointer;
+}
+
+body #share a {
+  text-align: center;
+  text-decoration: none;
+}
+
+body #share a img {
+  width: 75vw;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  display: none;
+}
+
+body #share a p {
+  color: black;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  font-family: 'Tillana', cursive;
+  font-size: 1rem;
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
